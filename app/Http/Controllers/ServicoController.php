@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Servico;
 use Illuminate\Http\Request;
+use App\Http\Resources\ServicoResource;
 
 class ServicoController extends Controller
 {
@@ -12,6 +13,9 @@ class ServicoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function showResource(){
+        return new ServicoResource(Servico::find(2));
+    }
     public function index()
     {
         $servicos = Servico::all();

@@ -17,7 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('resource', 'ProdutoController@showResource');
+Route::get('resourceproduto', 'ProdutoController@showResource');
+
+Route::get('resourceparceiro', 'ParceiroController@showResource');
+
+Route::get('resourceservico', 'ServicoController@showResource');
 
 //Route::get('/produto/{id}', 'MinhaController@getProduto')->name('pegar-produto');
 

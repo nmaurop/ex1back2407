@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Parceiro;
 use Illuminate\Http\Request;
+use App\Http\Resources\ParceiroResource;
 
 class ParceiroController extends Controller
 {
@@ -12,6 +13,9 @@ class ParceiroController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function showResource(){
+        return new ParceiroResource(Parceiro::find(2));
+    }
     public function index()
     {
         $parceiros = Parceiro::all();
