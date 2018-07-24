@@ -1,10 +1,10 @@
 <?php
-/* Resource associada a PRODUTOS */
+
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Resource1 extends JsonResource
+class ParceiroResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,10 +16,10 @@ class Resource1 extends JsonResource
     {
         return [
             'Nome:' => $this->nome,
-            'Tipo:' => $this->tipo,
-            'Preco: R$ '=> $this->preco,
-            'Quantidade' => $this->quantidade,
-            'Criado em:' => $this->created_at
+            'Endereco:' => $this->endereco,
+            'CNPJ:'=> $this->cnpj,
+            'Quantia investida: R$ ' => $this->investimento,
+            'Registro da parceria:' => $this->created_at
         ];
     }
 }

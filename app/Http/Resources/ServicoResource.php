@@ -1,10 +1,10 @@
 <?php
-/* Resource associada a PRODUTOS */
+
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Resource1 extends JsonResource
+class ServicoResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,12 +14,11 @@ class Resource1 extends JsonResource
      */
     public function toArray($request)
     {
-        return [
+        return [ 
             'Nome:' => $this->nome,
-            'Tipo:' => $this->tipo,
+            'Disponibilidade:' => $this->disponibilidade,
             'Preco: R$ '=> $this->preco,
-            'Quantidade' => $this->quantidade,
-            'Criado em:' => $this->created_at
+            'Tipo:' => $this->quantidade
         ];
     }
 }
