@@ -13,9 +13,19 @@ class ServicoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function showResource(){
+    public function showResource()
+    {
         return new ServicoResource(Servico::find(2));
     }
+
+     /*funcao extra*/
+
+    public function showdisponibilidade($id)
+    {
+        $servico = Servico::find($id);
+        return $servico->disponibilidade;
+    }
+
     public function index()
     {
         $servicos = Servico::all();

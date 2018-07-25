@@ -15,6 +15,12 @@ class ProdutoController extends Controller
 
 
      */
+    public function showpreco($id)
+    {
+        $produto = Produto::find($id);
+        return $produto->preco;
+
+    }
     public function showResource(){
         return new ProdutoResource(Produto::find(2));
     }

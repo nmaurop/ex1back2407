@@ -23,6 +23,18 @@ Route::get('resourceparceiro', 'ParceiroController@showResource');
 
 Route::get('resourceservico', 'ServicoController@showResource');
 
+/*Rotas das funcoes extras*/
+Route::get('precoproduto/{id}', 'ProdutoController@showpreco');
+
+Route::get('investimento/{id}', 'ParceiroController@showinvestimento');
+
+Route::get('disponibilidade/{id}', 'ServicoController@showdisponibilidade');
+
+/*---------------------*/
+
+
+
+
 //Route::get('/produto/{id}', 'MinhaController@getProduto')->name('pegar-produto');
 
 //Route::post('/produto', 'MinhaController@criarProduto')->name('criar-produto');

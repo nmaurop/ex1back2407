@@ -13,9 +13,19 @@ class ParceiroController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function showResource(){
+    public function showResource()
+    {
         return new ParceiroResource(Parceiro::find(2));
     }
+
+    /*funcao extra*/
+
+    public function showinvestimento($id)
+    {
+        $parceiro = Parceiro::find($id);
+        return $parceiro->investimento;
+    }
+
     public function index()
     {
         $parceiros = Parceiro::all();
